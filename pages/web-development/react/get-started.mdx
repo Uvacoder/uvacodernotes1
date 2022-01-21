@@ -1,0 +1,87 @@
+# Getting Started
+
+import Callout from 'nextra-theme-docs/callout'
+
+## Basic Setup
+
+The easiest way to start a react app is using Create React App (CRA).
+
+```bash
+$ npx create-react-app my-app
+$ cd my-app
+$ yarn start
+```
+
+**Note:** If `npx create-react-app` fails with:
+<Callout emoji="⚠️">
+  You are running `create-react-app` 4.0.3, which is behind the latest release (5.0.0).
+
+  We no longer support global installation of Create React App.
+</Callout>
+
+Try:
+
+```bash
+$ npx create-react-app@latest my-app
+```
+
+## With Typescript
+
+To use Typescript in your proyect, you can use:
+
+```bash
+$ npx create-react-app@latest my-app --template typescript
+# or
+$ yarn create react-app my-app --template typescript
+```
+
+## With Vite.js
+
+Another way to bootstrap a React app is using Vite.js. 
+
+```bash
+# npm 6.x
+npm init vite@latest my-app --template react
+
+# npm 7+, extra double-dash is needed:
+npm init vite@latest my-app -- --template react
+
+# yarn
+yarn create vite my-app --template react
+
+# pnpm
+pnpm create vite my-app -- --template react
+```
+
+Other available templates: `vanilla`, `vanilla-ts`, `vue`, `vue-ts`, `react`, `react-ts`, `preact`, `preact-ts`, `lit`, `lit-ts`, `svelte`, `svelte-ts`.
+
+After the commands end, install dependencies and start dev server:
+
+```bash
+$ yarn
+$ yarn dev
+```
+
+### Adding path aliases
+
+If using vite you need to add an extra config to the `vite.config.js` file:
+
+```js
+import { defineConfig } from 'vite'
+import reactRefresh from '@vitejs/plugin-react-refresh'
+import path from 'path'
+
+// https://vitejs.dev/config/
+export default defineConfig({
+  plugins: [reactRefresh()],
+  resolve: {
+    alias: {
+      '@': path.resolve(__dirname, './src'),
+    },
+  },
+})
+```
+
+and this will allow to use paths as:
+
+`import X from '@/components/X'`

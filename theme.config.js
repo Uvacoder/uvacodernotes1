@@ -2,7 +2,7 @@ export default {
   github: 'https://github.com/sergiobarria',
   projectLink: '',
   docsRepositoryBase: 'https://github.com/sergiobarria/docs/blob/main',
-  titleSuffix: ' - Nextra',
+  titleSuffix: ' - Sergio Barria',
   nextLinks: true,
   prevLinks: true,
   search: true,
@@ -22,9 +22,6 @@ export default {
     </>
   ),
   footerEditLink: `Edit this page on Github`,
-  // logo: (
-  //   <></>
-  // )
   head: (
     <>
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -32,4 +29,5 @@ export default {
       <meta name="og:title" content="Nextra: the next docs builder" />
     </>
   ),
+  unstable_faviconGlyph: '📙',
 };
