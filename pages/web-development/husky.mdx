@@ -1,0 +1,115 @@
+# Husky Setup & Conventional Commits Setup
+
+## Install
+
+```bash
+$ npm install husky lint-staged --save--dev
+# or
+$ yarn add husky lint-staged --dev
+```
+
+## Usage
+
+Edit `package.json` create a `prepare` script and run it once:
+
+```bash
+$ npm set-script prepare "husky install"
+$ npm run prepare
+```
+
+### Add a Git hook
+
+```bash
+$ npx husky add .husky/precommit "yarn pre-commit"
+$ git add .husky/pre-commit
+```
+
+In your `package.json` add other script:
+
+```json:package.json
+"scripts": {
+  "pre-commit": "yarn tsc && yarn lint-staged",
+  // other scripts
+}
+```
+
+### Lint-staged Config
+
+In your `package.json` add this:
+
+```json:package.json
+...
+  "lint-staged": {
+    "**/*.{js,jsx,ts,tsx}": [
+      "yarn eslint",
+      "yarn prettier --write"
+    ]
+  }
+```
+
+### Adding other hooks
+
+#### Commit Message
+
+```bash
+$ npx husky add .husky/commit-msg
+```
+
+Inside the new commit-msg file add this:
+
+```shell
+#!/bin/sh
+if ! head -1 "$1" | grep -qE "^(feat|fix|chore|docs|test|style|refactor|perf|build|ci|revert)(\(.+?\))?: .{1,}$"; then
+    echo "Aborting commit. Your commit message is invalid." >&2
+    exit 1
+fi
+if ! head -1 "$1" | grep -qE "^.{1,88}$"; then
+    echo "Aborting commit. Your commit message is too long." >&2
+    exit 1
+fi
+```
+
+#### Post merge
+
+```shell
+$ npx husky add .husky/post-merge "yarn"
+```
+
+### Setup Commitizen (optional)
+
+Install commitizen globally
+
+```shell
+$ npm install -g commitizen
+# or
+$ yarn global add commitizen
+```
+
+Next, initialize your project to use the cz-conventional-changelog adapter:
+
+```shell
+$ commitizen init cz-conventional-changelog --save-dev --save-exact
+# or using yarn
+$ commitizen init cz-conventional-changelog --yarn --dev --exact
+```
+
+If not added, add the config to the `package.json` 
+
+```json:package.json
+...
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog"
+    }
+  }
+```
+
+#### Usage
+
+To use commitizen type:
+
+```shell
+$ git cz
+# or
+$ cz // if installed globally
+```
