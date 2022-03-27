@@ -13,3 +13,34 @@ git resed HEAD~1
 ```bash
 git checkout -b [branch-name]
 ```
+
+### Stash changes insted of commit
+
+Useful when you need to work on other branch and don't want to commit yet but don't want to loose your current work, you can stash them aside and recover them later.
+
+```bash
+$ git stash
+# or
+$ git stash -u # to include untracked files
+# or
+$ git stash -m "<YOUR_MESSAGE_HERE>" # to add a custom message
+# You can combine the last two commands like this
+$ git stash -u -m "<YOUR_MESSAGE_HERE>" # This will add untracked files to the stash and a custom message
+```
+
+#### Other useful `stash` commands
+
+```bash
+# To list your stashes
+$ git stash list
+
+# To see an specific stash
+$ git stash show 
+
+# To apply a stash to your branch
+$ git stash apply <STASH_NUMBER>
+
+# To create a new branch and apply your stash to the new branch
+$ git stash
+$ git stash branch <new-branch> stash@{0}
+```
