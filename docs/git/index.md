@@ -1,10 +1,6 @@
 ---
-
 title: Git
-
 ---
-
-
 
 ## Frequently Used
 
@@ -28,18 +24,14 @@ $ git switch -c [branch-name]
 
 Useful when you need to work on other branch and don't want to commit your current work yet, and don't want to lose it either. You can stash your work aside and recover it later.
 
-
-
 ```shell
 $ git stash
 $ git stash -u # to include untracked files
 $ git stash -m "<YOUR_MESSAGE_HERE>" # to add a custom message to your stash
 
 # You can combine the last two commands like this:
-$ git stash -u -m "<YOUR_MESSAGE_HERE>" 
+$ git stash -u -m "<YOUR_MESSAGE_HERE>"
 ```
-
-
 
 #### Other useful `git stash` commands
 
@@ -57,5 +49,3 @@ $ git stash apply stash@{0} # this applies the latest stash
 $ git stash
 $ git stash branch <new-branch-name> stash@{0}
 ```
-
-
