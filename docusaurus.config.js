@@ -6,15 +6,15 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: "Sergio Barria's docs",
+  title: "uvacoder docs",
   tagline: 'Dinosaurs are cool',
-  url: 'https://docs.sergiobarria.com',
+  url: 'https://notes-sergio.vercel.app',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
-  organizationName: 'sergiobarria', // Usually your GitHub org/user name.
-  projectName: 'docs', // Usually your repo name.
+  organizationName: 'uvacoder', // Usually your GitHub org/user name.
+  projectName: 'notes-sergio', // Usually your repo name.
 
   presets: [
     [
@@ -25,7 +25,7 @@ const config = {
           routeBasePath: '/',
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
-          editUrl: 'https://github.com/sergiobarria/docs',
+          editUrl: 'https://github.com/uvacoder/notes-sergio',
           exclude: ['**/docusaurus-tutorial/**'],
         },
         blog: false,
@@ -46,7 +46,7 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       navbar: {
-        title: "Sergio Barria's Docs",
+        title: "uvacoder Docs",
         logo: {
           alt: 'My Site Logo',
           src: 'img/s-logo.png',
@@ -109,7 +109,7 @@ const config = {
           //   ],
           // },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} Sergio Barria. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} uvacoder. Built with Docusaurus.`,
       },
       prism: {
         theme: lightCodeTheme,
