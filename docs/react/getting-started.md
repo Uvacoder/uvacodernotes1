@@ -8,7 +8,12 @@ sidebar_position: 1
 - [Awesome Reactjs Repo](https://github.com/enaqx/awesome-react) - A collection of awesome things regarding React ecosystem
 - [React Patterns](https://reactpatterns.com) - Curated collection of react patterns
 - [React Cheatsheet](https://reactcheatsheet.com) - Great cheatsheet for react v16
-
+- [TanStack](https://tanstack.com) - Open source libraries including, React Ranger, React Charts, TanStack Table, TanStack Query
+- [SWR](https://swr.vercel.app) - React Hooks for Data Fetching
+- [Awesome React Hooks Repo](https://github.com/rehooks/awesome-react-hooks) - A collection of all the awesome repos for react hooks
+- [React Router](https://reactrouter.com/en/main) - Declarative routing for React
+- [Awesome React Components Repo](https://github.com/brillout/awesome-react-components) - Curated List of React Components & Libraries
+- [React Icons](https://react-icons.github.io/react-icons/) - Svg react icons of popular icon packs
 
 ## Basic Setup
 
