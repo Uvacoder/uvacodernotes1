@@ -2,6 +2,13 @@
 title: Getting Started
 sidebar_position: 1
 ---
+## Important Links
+
+- [Reactjs Homepage](https://reactjs.org) - A JavaScript library for building user interfaces
+- [Awesome Reactjs Repo](https://github.com/enaqx/awesome-react) - A collection of awesome things regarding React ecosystem
+- [React Patterns](https://reactpatterns.com) - Curated collection of react patterns
+- [React Cheatsheet](https://reactcheatsheet.com) - Great cheatsheet for react v16
+
 
 ## Basic Setup
 
